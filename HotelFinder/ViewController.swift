@@ -8,10 +8,16 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        usernameTextField.delegate = self
+        passwordTextField.delegate = self
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -20,6 +26,21 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        // Hide the keyboard.
+        textField.resignFirstResponder()
+        return true
+    }
+    func textFieldDidEndEditing (textField: UITextField) {
+        // change the content
+       // mealNameLabel.text = textField.text
+    }
+    
+    // Nota: acciones
+    
+    @IBAction func login(sender: UIButton) {
+        print("Hola Mundo")
+    }
 
 }
 
