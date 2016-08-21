@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Dts-jl-XrC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HotelFinder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="HotelFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -39,7 +40,7 @@
                                         <state key="normal" title="Login"/>
                                         <connections>
                                             <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L8Z-0k-kqe"/>
-                                            <segue destination="Bgt-sq-BW0" kind="show" id="e4M-ai-3Dw"/>
+                                            <segue destination="5tr-cv-Yek" kind="show" id="vvj-Vl-VpC"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -66,12 +67,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1146" y="436"/>
+            <point key="canvasLocation" x="982" y="436"/>
         </scene>
-        <!--View Controller-->
+        <!--SEARCH-->
         <scene sceneID="0LT-IC-3gZ">
             <objects>
-                <viewController id="Bgt-sq-BW0" sceneMemberID="viewController">
+                <viewController id="Bgt-sq-BW0" customClass="SearchViewController" customModule="HotelFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Zy2-sQ-esE"/>
                         <viewControllerLayoutGuide type="bottom" id="1Gu-i5-INi"/>
@@ -79,30 +80,161 @@
                     <view key="view" contentMode="scaleToFill" id="RnM-Zv-5TC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Pw5-QI-Juo">
+                                <rect key="frame" x="20" y="264" width="560" height="72"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Location (e.g. Cochabamba, La Paz, Santa Cruz)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kS6-K4-nxa">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pWO-5g-mj4">
+                                        <rect key="frame" x="225" y="42" width="111" height="30"/>
+                                        <state key="normal" title="Search Location"/>
+                                        <connections>
+                                            <action selector="search:" destination="Bgt-sq-BW0" eventType="touchUpInside" id="BOY-1N-QU7"/>
+                                            <segue destination="VnO-97-icp" kind="show" identifier="ShowTableView" id="ZwD-W8-0Cq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="kS6-K4-nxa" firstAttribute="leading" secondItem="Pw5-QI-Juo" secondAttribute="leading" id="5ej-Ru-HhX"/>
+                                    <constraint firstAttribute="trailing" secondItem="kS6-K4-nxa" secondAttribute="trailing" id="bNY-65-JD9"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Pw5-QI-Juo" secondAttribute="trailing" id="VWt-tY-iiy"/>
+                            <constraint firstItem="Pw5-QI-Juo" firstAttribute="leading" secondItem="RnM-Zv-5TC" secondAttribute="leadingMargin" id="fl1-o4-FBE"/>
+                            <constraint firstItem="Pw5-QI-Juo" firstAttribute="top" secondItem="Zy2-sQ-esE" secondAttribute="bottom" constant="200" id="ruw-Sd-in7"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="SEARCH" id="XMQ-5O-Ho2">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="Zm9-ZS-I6K">
+                            <connections>
+                                <action selector="logout:" destination="Bgt-sq-BW0" id="mNs-nj-Dry"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="searchTextField" destination="kS6-K4-nxa" id="1Pd-KM-j1g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YR4-it-PEF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1780" y="436"/>
+            <point key="canvasLocation" x="2507" y="436"/>
+        </scene>
+        <!--HOTELS-->
+        <scene sceneID="JyD-SF-k1F">
+            <objects>
+                <tableViewController id="VnO-97-icp" customClass="HotelTableViewController" customModule="HotelFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="jEf-bE-Ovq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HotelTableViewCell" id="IAK-Lc-Kbe" userLabel="HotelTableViewCell" customClass="HotelTableViewCell" customModule="HotelFinder" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IAK-Lc-Kbe" id="M2X-IR-ag3">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="90"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CwN-H3-jyP">
+                                            <rect key="frame" x="121" y="8" width="443" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hqh-C6-2pp">
+                                            <rect key="frame" x="0.0" y="0.0" width="113" height="90"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="hotelImage" destination="Hqh-C6-2pp" id="AEG-Ee-E6D"/>
+                                    <outlet property="hotelNameLabel" destination="CwN-H3-jyP" id="3go-M1-ug2"/>
+                                    <segue destination="qYn-0b-9Sg" kind="show" identifier="ShowDetail" id="w9M-TL-klz"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="VnO-97-icp" id="ZFN-nt-HZr"/>
+                            <outlet property="delegate" destination="VnO-97-icp" id="0On-6k-cLP"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="HOTELS" id="0Oy-Su-F9a"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="21k-i0-3yf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3423" y="436"/>
+        </scene>
+        <!--Hotel View Controller-->
+        <scene sceneID="uzW-52-FEs">
+            <objects>
+                <viewController id="qYn-0b-9Sg" customClass="HotelViewController" customModule="HotelFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gBV-zn-ZuM"/>
+                        <viewControllerLayoutGuide type="bottom" id="M07-mj-rS4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="G7U-cQ-daj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="kXK-ri-BZB">
+                                <rect key="frame" x="30" y="119" width="540" height="361"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNG-6f-Evh">
+                                        <rect key="frame" x="249" y="0.0" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" translatesAutoresizingMaskIntoConstraints="NO" id="1VS-4g-mpE">
+                                        <rect key="frame" x="110" y="41" width="320" height="320"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="1VS-4g-mpE" secondAttribute="height" multiplier="1:1" id="yvq-sY-8Ki"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kXK-ri-BZB" firstAttribute="leading" secondItem="G7U-cQ-daj" secondAttribute="leadingMargin" constant="10" id="SmQ-hJ-90o"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kXK-ri-BZB" secondAttribute="trailing" constant="10" id="dJI-tl-x8Y"/>
+                            <constraint firstItem="kXK-ri-BZB" firstAttribute="top" secondItem="gBV-zn-ZuM" secondAttribute="bottom" constant="34" id="wbI-9q-cj8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="hotelImageView" destination="1VS-4g-mpE" id="CUv-1y-Pp2"/>
+                        <outlet property="hotelNameLabel" destination="YNG-6f-Evh" id="8hc-X8-KN6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kZj-R0-pYc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4161" y="436"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="SXd-xY-MZ2">
+        <scene sceneID="RxC-XY-Be6">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dts-jl-XrC" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GBB-uj-gFp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5tr-cv-Yek" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hoy-gV-BM1">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cVg-6b-XIF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="TEj-Sn-PIE"/>
+                        <segue destination="Bgt-sq-BW0" kind="relationship" relationship="rootViewController" id="8jA-gj-byD"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Zd7-bJ-StH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="334" y="436"/>
+            <point key="canvasLocation" x="1695" y="436"/>
         </scene>
     </scenes>
     <resources>

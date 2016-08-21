@@ -7,17 +7,47 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D40673111D68F92C008BB8EE /* HotelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40673101D68F92C008BB8EE /* HotelTableViewCell.swift */; };
+		D40673131D68FA01008BB8EE /* HotelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40673121D68FA01008BB8EE /* HotelTableViewController.swift */; };
+		D40673161D68FF7E008BB8EE /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D40673141D68FF7E008BB8EE /* Alamofire.framework */; };
+		D40673171D68FF7E008BB8EE /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D40673151D68FF7E008BB8EE /* SwiftyJSON.framework */; };
+		D40673191D68FFC1008BB8EE /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D40673141D68FF7E008BB8EE /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D406731A1D68FFC1008BB8EE /* SwiftyJSON.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D40673151D68FF7E008BB8EE /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D406731C1D6900B0008BB8EE /* Hotel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D406731B1D6900B0008BB8EE /* Hotel.swift */; };
+		D406731E1D692163008BB8EE /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D406731D1D692163008BB8EE /* SearchViewController.swift */; };
+		D40673201D692BBC008BB8EE /* HotelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D406731F1D692BBC008BB8EE /* HotelViewController.swift */; };
 		D4D23A9C1D6639E200739E93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D23A9B1D6639E200739E93 /* AppDelegate.swift */; };
-		D4D23A9E1D6639E200739E93 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D23A9D1D6639E200739E93 /* ViewController.swift */; };
+		D4D23A9E1D6639E200739E93 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D23A9D1D6639E200739E93 /* LoginViewController.swift */; };
 		D4D23AA11D6639E200739E93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4D23A9F1D6639E200739E93 /* Main.storyboard */; };
 		D4D23AA31D6639E200739E93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4D23AA21D6639E200739E93 /* Assets.xcassets */; };
 		D4D23AA61D6639E200739E93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4D23AA41D6639E200739E93 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D40673181D68FFAD008BB8EE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D40673191D68FFC1008BB8EE /* Alamofire.framework in CopyFiles */,
+				D406731A1D68FFC1008BB8EE /* SwiftyJSON.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		D40673101D68F92C008BB8EE /* HotelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelTableViewCell.swift; sourceTree = "<group>"; };
+		D40673121D68FA01008BB8EE /* HotelTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelTableViewController.swift; sourceTree = "<group>"; };
+		D40673141D68FF7E008BB8EE /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		D40673151D68FF7E008BB8EE /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		D406731B1D6900B0008BB8EE /* Hotel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hotel.swift; sourceTree = "<group>"; };
+		D406731D1D692163008BB8EE /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		D406731F1D692BBC008BB8EE /* HotelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelViewController.swift; sourceTree = "<group>"; };
 		D4D23A981D6639E200739E93 /* HotelFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotelFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D23A9B1D6639E200739E93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D4D23A9D1D6639E200739E93 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D4D23A9D1D6639E200739E93 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D4D23AA01D6639E200739E93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D4D23AA21D6639E200739E93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4D23AA51D6639E200739E93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -29,6 +59,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D40673161D68FF7E008BB8EE /* Alamofire.framework in Frameworks */,
+				D40673171D68FF7E008BB8EE /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +70,8 @@
 		D4D23A8F1D6639E200739E93 = {
 			isa = PBXGroup;
 			children = (
+				D40673141D68FF7E008BB8EE /* Alamofire.framework */,
+				D40673151D68FF7E008BB8EE /* SwiftyJSON.framework */,
 				D4D23A9A1D6639E200739E93 /* HotelFinder */,
 				D4D23A991D6639E200739E93 /* Products */,
 			);
@@ -55,11 +89,16 @@
 			isa = PBXGroup;
 			children = (
 				D4D23A9B1D6639E200739E93 /* AppDelegate.swift */,
-				D4D23A9D1D6639E200739E93 /* ViewController.swift */,
+				D4D23A9D1D6639E200739E93 /* LoginViewController.swift */,
 				D4D23A9F1D6639E200739E93 /* Main.storyboard */,
 				D4D23AA21D6639E200739E93 /* Assets.xcassets */,
 				D4D23AA41D6639E200739E93 /* LaunchScreen.storyboard */,
 				D4D23AA71D6639E200739E93 /* Info.plist */,
+				D40673101D68F92C008BB8EE /* HotelTableViewCell.swift */,
+				D40673121D68FA01008BB8EE /* HotelTableViewController.swift */,
+				D406731B1D6900B0008BB8EE /* Hotel.swift */,
+				D406731D1D692163008BB8EE /* SearchViewController.swift */,
+				D406731F1D692BBC008BB8EE /* HotelViewController.swift */,
 			);
 			path = HotelFinder;
 			sourceTree = "<group>";
@@ -74,6 +113,7 @@
 				D4D23A941D6639E200739E93 /* Sources */,
 				D4D23A951D6639E200739E93 /* Frameworks */,
 				D4D23A961D6639E200739E93 /* Resources */,
+				D40673181D68FFAD008BB8EE /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -135,7 +175,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4D23A9E1D6639E200739E93 /* ViewController.swift in Sources */,
+				D406731E1D692163008BB8EE /* SearchViewController.swift in Sources */,
+				D406731C1D6900B0008BB8EE /* Hotel.swift in Sources */,
+				D40673201D692BBC008BB8EE /* HotelViewController.swift in Sources */,
+				D40673131D68FA01008BB8EE /* HotelTableViewController.swift in Sources */,
+				D40673111D68F92C008BB8EE /* HotelTableViewCell.swift in Sources */,
+				D4D23A9E1D6639E200739E93 /* LoginViewController.swift in Sources */,
 				D4D23A9C1D6639E200739E93 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,6 +296,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = HotelFinder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = macaws.net.HotelFinder;
@@ -262,6 +311,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = HotelFinder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = macaws.net.HotelFinder;
@@ -288,6 +341,7 @@
 				D4D23AAC1D6639E200739E93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
